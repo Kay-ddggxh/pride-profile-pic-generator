@@ -1,0 +1,34 @@
+.donut {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    margin: auto;
+  }
+  .donut::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: #8a8a8afb;
+    z-index: -1;
+  }
+  .donut::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-size: cover;
+    background-image: url("../images/placeholder-smiley-face.webp");
+    transform: rotate(225deg);
+    border-radius: 50%;
+    top: 35px;
+    left: 35px;
+    right: 35px;
+    bottom: 35px;
+  }
