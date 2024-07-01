@@ -5,6 +5,7 @@ Simple front-end JS app to generate profile image with pride flag border
 
 - Bootstrap 5
 - https://www.freeconvert.com/png-to-webp
+- https://github.com/tsayen/dom-to-image
 
 ## Sources
 

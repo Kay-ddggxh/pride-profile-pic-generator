@@ -1,3 +1,9 @@
+.donut-container {
+  padding: 20px;
+  display: inline-block; /* Makes sure the container wraps the donut properly */
+  background-color: transparent; /* Same as the background of the body or parent element */
+}
+
 .donut {
     width: 350px;
     height: 350px;
