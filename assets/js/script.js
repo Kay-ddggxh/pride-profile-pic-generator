@@ -4,6 +4,7 @@ document.getElementById('image-form').addEventListener('submit', function(event)
     const fileInput = document.getElementById('image-upload');
     const colorInput = document.getElementById('color-input');
     const donut = document.getElementById('donut');
+    const downloadBtn = document.getElementById('download-btn');
   
     const file = fileInput.files[0];
     const hexColor = colorInput.value;
@@ -29,6 +30,12 @@ document.getElementById('image-form').addEventListener('submit', function(event)
             donutAfterRule.style.backgroundImage = `url(${imageUrl})`;
         }
   
+        // Capture the .donut element as an image and provide a download link
+        html2canvas(donut).then(canvas => {
+            const dataURL = canvas.toDataURL('image/png');
+            downloadBtn.href = dataURL;
+            downloadBtn.style.display = 'block';
+        });
     };
   
     reader.readAsDataURL(file);

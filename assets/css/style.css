@@ -32,3 +32,8 @@
     right: 35px;
     bottom: 35px;
   }
+
+  #download-btn {
+    display: none;
+    text-align: center;
+  }

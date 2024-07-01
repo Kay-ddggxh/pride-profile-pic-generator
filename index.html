@@ -18,6 +18,8 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <!-- html2 canvas library -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   </head>
 
   <body>
@@ -27,18 +29,24 @@
         <div class="user-input col-md-8">
           <form id="image-form">
             <label for="image-upload">Upload Image:</label>
-            <input type="file" id="image-upload" accept="image/*" required>
-            <br><br>
+            <input type="file" id="image-upload" accept="image/*" required />
+            <br /><br />
             <label for="color-input">Hex Color Code:</label>
-            <input type="text" id="color-input" placeholder="#ff0000" required>
-            <br><br>
+            <input
+              type="text"
+              id="color-input"
+              placeholder="#ff0000"
+              required
+            />
+            <br /><br />
             <button type="submit">Generate Profile Image</button>
-        </form>
+          </form>
         </div>
         <div class="image-output col-md-4">
           <h2>Generated Profile Image:</h2>
           <div class="donut" id="donut"></div>
         </div>
+        <a id="download-btn" download="profile-image.png">Download Image</a>
       </main>
     </div>
     <script src="assets/js/script.js"></script>
