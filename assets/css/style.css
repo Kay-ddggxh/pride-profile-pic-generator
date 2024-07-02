@@ -6,6 +6,25 @@
   margin-right: 8px;
 }
 
+/* Source: https://codepen.io/unnegative/pen/dVwYBq?editors=1100 */
+.preview-btn {
+  background-color: #302244;
+  color: rgb(217, 227, 236);
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%
+  );
+  border-image-slice: 1;
+  padding: 0.5em;
+}
+
+
+/* Profile Image Styling */
 
 .donut-container {
   padding: 20px;
@@ -14,41 +33,56 @@
 }
 
 .donut {
-    width: 350px;
-    height: 350px;
-    background-color: transparent;
-    border-radius: 50%;
-    position: relative;
-    transform: rotate(135deg);
-    margin: auto;
-  }
-  .donut::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border-radius: 50%;
-    background: #8a8a8afb;
-    z-index: -1;
-  }
-  .donut::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-size: cover;
-    background-image: url("../images/placeholder-smiley-face.webp");
-    transform: rotate(225deg);
-    border-radius: 50%;
-    top: 65px;
-    left: 65px;
-    right: 65px;
-    bottom: 65px;
-  }
+  width: 350px;
+  height: 350px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(135deg);
+  margin: auto;
+}
+.donut::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  border: #8a8a8afb dashed 16px;
+  z-index: -1;
+}
+.donut::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-size: cover;
+  background-image: url("../images/placeholder-smiley-face.webp");
+  transform: rotate(225deg);
+  border-radius: 50%;
+  top: 65px;
+  left: 65px;
+  right: 65px;
+  bottom: 65px;
+}
 
-  #download-btn {
-    display: none;
-    text-align: center;
-  }
+#download-btn {
+  display: none;
+  width: auto;
+  background-color: #302244;
+  color: rgb(217, 227, 236);
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%
+  );
+  border-image-slice: 1;
+  padding: 0.5em;
+  text-decoration: none;
+  font-weight: 700;
+}

@@ -68,6 +68,7 @@ document
 
       if (donutBeforeRule) {
         donutBeforeRule.style.background = gradient;
+        donutBeforeRule.style.border = "none";
       }
 
       if (donutAfterRule) {
