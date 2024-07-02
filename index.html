@@ -27,18 +27,286 @@
       <h1>Pride Profile Pic Generator</h1>
       <main class="row">
         <div class="user-input col-md-8">
+          <!-- Form to upload image and select pride flag pattern -->
           <form id="image-form">
             <label for="image-upload">Upload Image:</label>
             <input type="file" id="image-upload" accept="image/*" required />
-            <br /><br />
-            <label for="color-input">Hex Color Code:</label>
+            <br />
+            <!-- <label for="color-input">Hex Color Code:</label>
             <input
               type="text"
               id="color-input"
               placeholder="#ff0000"
               required
-            />
-            <br /><br />
+            /> -->
+            <div class="radio-btn-group my-2 row">
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input type="radio" id="lgbt" name="pride_flag" value="lgbt" />
+                <label for="lgbt" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/lgbt.webp"
+                    alt="lgbt flag"
+                    class="flag-icon"
+                  />LGBT</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="agender"
+                  name="pride_flag"
+                  value="agender"
+                />
+                <label for="agender" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/agender.webp"
+                    alt="agender flag"
+                    class="flag-icon"
+                  />Agender</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="androgyne"
+                  name="pride_flag"
+                  value="androgyne"
+                />
+                <label for="androgyne" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/androgyne.webp"
+                    alt="androgyne flag"
+                    class="flag-icon"
+                  />Androgyne</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="aromantic"
+                  name="pride_flag"
+                  value="aromantic"
+                />
+                <label for="androgyne" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/aromantic.webp"
+                    alt="aromantic flag"
+                    class="flag-icon"
+                  />Aromantic</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="asexual"
+                  name="pride_flag"
+                  value="asexual"
+                />
+                <label for="asexual" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/asexual.webp"
+                    alt="asexual flag"
+                    class="flag-icon"
+                  />Asexual</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="bear"
+                  name="pride_flag"
+                  value="bear"
+                />
+                <label for="bear" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/bear.webp"
+                    alt="bear flag"
+                    class="flag-icon"
+                  />Bear</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="bisexual"
+                  name="pride_flag"
+                  value="bisexual"
+                />
+                <label for="bisexual" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/bisexual.webp"
+                    alt="bisexual flag"
+                    class="flag-icon"
+                  />Bisexual</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="demiboy"
+                  name="pride_flag"
+                  value="demiboy"
+                />
+                <label for="demiboy" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/demiboy.webp"
+                    alt="demiboy flag"
+                    class="flag-icon"
+                  />Demiboy</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="demigirl"
+                  name="pride_flag"
+                  value="demigirl"
+                />
+                <label for="demigirl" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/demigirl.webp"
+                    alt="demigirl flag"
+                    class="flag-icon"
+                  />Demigirl</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="genderfluid"
+                  name="pride_flag"
+                  value="genderfluid"
+                />
+                <label for="genderfluid" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/genderfluid.webp"
+                    alt="genderfluid flag"
+                    class="flag-icon"
+                  />Genderfluid</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="genderqueer"
+                  name="pride_flag"
+                  value="genderqueer"
+                />
+                <label for="genderqueer" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/genderqueer.webp"
+                    alt="genderqueer flag"
+                    class="flag-icon"
+                  />Genderqueer</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="lesbian"
+                  name="pride_flag"
+                  value="lesbian"
+                />
+                <label for="lesbian" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/lesbian.webp"
+                    alt="lesbian flag"
+                    class="flag-icon"
+                  />Lesbian</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="neutrois"
+                  name="pride_flag"
+                  value="neutrois"
+                />
+                <label for="neutrois" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/neutrois.webp"
+                    alt="neutrois flag"
+                    class="flag-icon"
+                  />Neutrois</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="nonbinary"
+                  name="pride_flag"
+                  value="nonbinary"
+                />
+                <label for="nonbinary" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/nonbinary.webp"
+                    alt="nonbinary flag"
+                    class="flag-icon"
+                  />Nonbinary</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="pansexual"
+                  name="pride_flag"
+                  value="pansexual"
+                />
+                <label for="pansexual" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/pansexual.webp"
+                    alt="pansexual flag"
+                    class="flag-icon"
+                  />Pansexual</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="philly"
+                  name="pride_flag"
+                  value="philly"
+                />
+                <label for="philly" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/philly.webp"
+                    alt="philly flag"
+                    class="flag-icon"
+                  />Philly</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="polysexual"
+                  name="pride_flag"
+                  value="polysexual"
+                />
+                <label for="polysexual" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/polysexual.webp"
+                    alt="polysexual flag"
+                    class="flag-icon"
+                  />Polysexual</label
+                >
+              </div>
+              <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
+                <input
+                  type="radio"
+                  id="transgender"
+                  name="pride_flag"
+                  value="transgender"
+                />
+                <label for="transgender" class="mb-3"
+                  ><img
+                    src="assets/images/flag-icons/transgender.webp"
+                    alt="transgender flag"
+                    class="flag-icon"
+                  />Transgender</label
+                >
+              </div>
+            </div>
+            <br />
             <button type="submit">Generate Profile Image</button>
           </form>
         </div>
