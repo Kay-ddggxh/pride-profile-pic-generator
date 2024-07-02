@@ -1,3 +1,24 @@
+.heading {
+  margin-top: 1.5em;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: #000;
+  text-shadow: -1px 1px #ef3550,
+               -2px 2px #f48fb1,
+               -3px 3px #7e57c2,
+               -4px 4px #2196f3,
+               -5px 5px #26c6da,
+               -6px 6px #43a047,
+               -7px 7px #eeff41,
+               -8px 8px #f9a825,
+               -9px 9px #ff5722;
+}
+
+
 /* Form styling */
 
 .flag-icon {
@@ -22,7 +43,6 @@
   border-image-slice: 1;
   padding: 0.5em;
 }
-
 
 /* Profile Image Styling */
 
@@ -69,7 +89,8 @@
 
 #download-btn {
   display: none;
-  width: auto;
+  width: fit-content;
+  margin: 0 auto;
   background-color: #302244;
   color: rgb(217, 227, 236);
   border: 3px solid transparent;

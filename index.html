@@ -24,14 +24,15 @@
 
   <body>
     <div class="container">
-      <h1>Pride Profile Pic Generator</h1>
+      <h1 class="heading">Pride Profile Pic Generator</h1>
       <main class="row">
         <div class="user-input col-md-8">
           <!-- Form to upload image and select pride flag pattern -->
           <form id="image-form">
-            <label for="image-upload">Upload Image:</label>
-            <input type="file" id="image-upload" accept="image/*" required />
-            <br />
+            <div class="img-input my-4">
+              <label for="image-upload">Upload Image:</label>
+              <input type="file" id="image-upload" accept="image/*" required />
+            </div>
             <div class="radio-btn-group my-2 row">
               <div class="radio-label-pair col-lg-2 col-md-4 col-sm-6">
                 <input type="radio" id="lgbt" name="pride_flag" value="lgbt" />
@@ -295,7 +296,9 @@
               </div>
             </div>
             <br />
-            <button type="submit" class="preview-btn">Generate Profile Image</button>
+            <button type="submit" class="preview-btn">
+              Generate Profile Image
+            </button>
           </form>
         </div>
         <div class="image-output col-md-4 mt-5">
@@ -303,8 +306,8 @@
           <div class="donut-container">
             <div class="donut" id="donut"></div>
           </div>
+          <a id="download-btn" download="profile-image.png">Download Image</a>
         </div>
-        <a id="download-btn" download="profile-image.png">Download Image</a>
       </main>
     </div>
     <script src="assets/js/script.js"></script>
