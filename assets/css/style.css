@@ -1,3 +1,4 @@
+/* Source: https://welearncode.com/rainbow-text/ */
 .heading {
   margin-top: 1.5em;
   margin-bottom: 50px;
@@ -7,17 +8,8 @@
   letter-spacing: 0.15rem;
   text-transform: uppercase;
   color: #000;
-  text-shadow: -1px 1px #ef3550,
-               -2px 2px #f48fb1,
-               -3px 3px #7e57c2,
-               -4px 4px #2196f3,
-               -5px 5px #26c6da,
-               -6px 6px #43a047,
-               -7px 7px #eeff41,
-               -8px 8px #f9a825,
-               -9px 9px #ff5722;
+  text-shadow: -1px 1px #ef3550, -2px 2px #f48fb1, -3px 3px #7e57c2, -4px 4px #2196f3, -5px 5px #26c6da, -6px 6px #43a047, -7px 7px #eeff41, -8px 8px #f9a825, -9px 9px #ff5722;
 }
-
 
 /* Form styling */
 
@@ -48,19 +40,23 @@
 
 .donut-container {
   padding: 20px;
-  display: inline-block; /* Makes sure the container wraps the donut properly */
-  background-color: transparent; /* Same as the background of the body or parent element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
 
 .donut {
-  width: 350px;
-  height: 350px;
+  width: 100%; 
+  max-width: 350px; 
+  aspect-ratio: 1; 
   background-color: transparent;
   border-radius: 50%;
   position: relative;
   transform: rotate(135deg);
   margin: auto;
 }
+
 .donut::before {
   content: "";
   display: block;
@@ -73,6 +69,7 @@
   border: #8a8a8afb dashed 16px;
   z-index: -1;
 }
+
 .donut::after {
   content: "";
   display: block;
@@ -81,10 +78,10 @@
   background-image: url("../images/placeholder-smiley-face.webp");
   transform: rotate(225deg);
   border-radius: 50%;
-  top: 65px;
-  left: 65px;
-  right: 65px;
-  bottom: 65px;
+  top: 18%;
+  left: 18%;
+  right: 18%;
+  bottom: 18%;
 }
 
 #download-btn {
@@ -106,4 +103,25 @@
   padding: 0.5em;
   text-decoration: none;
   font-weight: 700;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 767px) {
+  .donut {
+    max-width: 90%; 
+  }
+  
+  .flag-icon {
+    width: 60px; 
+  }
+  
+  .radio-label-pair {
+    margin-bottom: 1rem; 
+  }
+  
+  .preview-btn, #download-btn {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0; 
+  }
 }
