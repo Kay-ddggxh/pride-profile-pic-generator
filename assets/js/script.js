@@ -80,24 +80,41 @@ document
       drag-drop image with mouse
       Source: https://tonylea.com/how-to-drag-an-element-using-javascript
       */
-      let imgEl = document.getElementById("donut"); // might have to change due to :after pseudo-selector
-      let newPosX = 0, newPosY = 0, startPosX = 0, startPosY = 0;
+      const donutElement = document.querySelector(".donut");
 
-      imgEl.addEventListener("mousedown", function(event) {
+      let isDragging = false;
+      let startX, startY, currentX = 0, currentY = 0;
+  
+      donutElement.addEventListener("mousedown", function(event) {
         event.preventDefault();
-
-        startPosX = event.clientX;
-        startPosY = event.clientY;
-
+  
+        isDragging = true;
+        startX = event.clientX;
+        startY = event.clientY;
+  
         document.addEventListener("mousemove", mouseMove);
-
-        document.addEventListener("mouseup", function() {
-          document.removeEventListener("mousemove", mouseMove);
-        });
+        document.addEventListener("mouseup", mouseUp);
       });
-
+  
       function mouseMove(event) {
-        console.log("moving now!!!");
+        if (!isDragging) return;
+  
+        const dx = event.clientX - startX;
+        const dy = event.clientY - startY;
+  
+        startX = event.clientX;
+        startY = event.clientY;
+  
+        currentX += dx;
+        currentY += dy;
+  
+        donutAfterRule.style.backgroundPosition = `${currentX}px ${currentY}px`;
+      }
+  
+      function mouseUp() {
+        isDragging = false;
+        document.removeEventListener("mousemove", mouseMove);
+        document.removeEventListener("mouseup", mouseUp);
       }
 
 
