@@ -73,7 +73,33 @@ document
 
       if (donutAfterRule) {
         donutAfterRule.style.backgroundImage = `url(${imageUrl})`;
+        donutAfterRule.style.cursor = "move";
       }
+
+      /* 
+      drag-drop image with mouse
+      Source: https://tonylea.com/how-to-drag-an-element-using-javascript
+      */
+      let imgEl = document.getElementById("donut"); // might have to change due to :after pseudo-selector
+      let newPosX = 0, newPosY = 0, startPosX = 0, startPosY = 0;
+
+      imgEl.addEventListener("mousedown", function(event) {
+        event.preventDefault();
+
+        startPosX = event.clientX;
+        startPosY = event.clientY;
+
+        document.addEventListener("mousemove", mouseMove);
+
+        document.addEventListener("mouseup", function() {
+          document.removeEventListener("mousemove", mouseMove);
+        });
+      });
+
+      function mouseMove(event) {
+        console.log("moving now!!!");
+      }
+
 
       // Use dom-to-image to capture the .donut-container element and provide a download link
       domtoimage
